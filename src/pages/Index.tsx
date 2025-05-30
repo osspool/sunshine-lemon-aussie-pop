@@ -17,6 +17,10 @@ const Index = () => {
         <div className="absolute top-40 right-20 w-12 h-12 bg-brand-green/20 rounded-full animate-bounce-gentle"></div>
         <div className="absolute bottom-40 left-20 w-20 h-20 bg-brand-yellow/15 rounded-full animate-pulse-slow"></div>
         <div className="absolute bottom-20 right-10 w-14 h-14 bg-brand-green/15 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
+        
+        {/* Additional juice-themed floating elements */}
+        <div className="absolute top-1/3 left-1/3 w-8 h-8 bg-yellow-300/30 rounded-full animate-wiggle" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/3 right-1/3 w-6 h-6 bg-green-300/30 rounded-full animate-bounce-gentle" style={{ animationDelay: '3s' }}></div>
       </div>
 
       {/* Main content */}

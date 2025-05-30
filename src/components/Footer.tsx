@@ -6,11 +6,15 @@ const Footer = () => {
     <footer className="bg-brand-green text-white py-16 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Brand section */}
+          {/* Brand section with logo */}
           <div className="text-center md:text-left">
-            <h3 className="text-3xl font-bold mb-4 text-brand-yellow">
-              Pops Lemonade AU
-            </h3>
+            <div className="mb-4 flex justify-center md:justify-start">
+              <img 
+                src="/lovable-uploads/c5f7d5db-75f8-40c3-a3b2-33e00398a97d.png" 
+                alt="Pops Lemonade AU Logo" 
+                className="w-32 h-auto"
+              />
+            </div>
             <p className="text-white/80 leading-relaxed">
               Bringing you the zest of life with every sip. Handcrafted with love, 
               made with the finest Australian ingredients.
@@ -30,12 +34,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social media */}
+          {/* Contact Us section */}
           <div className="text-center md:text-right">
             <h4 className="text-xl font-bold mb-4 text-brand-yellow">
-              Follow Our Journey
+              Contact Us
             </h4>
-            <div className="flex justify-center md:justify-end space-x-4 mb-4">
+            <div className="mb-4">
+              <p className="text-white/80 mb-2">
+                📧 hello@popslemonade.com.au
+              </p>
+              <p className="text-white/80 mb-4">
+                📱 Follow our journey on social media
+              </p>
+            </div>
+            <div className="flex justify-center md:justify-end space-x-4">
               <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand-yellow hover:text-brand-green transition-all duration-300 cursor-pointer transform hover:scale-110">
                 <Instagram className="w-5 h-5" />
               </div>
@@ -49,9 +61,6 @@ const Footer = () => {
                 <Mail className="w-5 h-5" />
               </div>
             </div>
-            <p className="text-white/60 text-sm">
-              hello@popslemonade.com.au
-            </p>
           </div>
         </div>
 

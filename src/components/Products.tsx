@@ -9,21 +9,24 @@ const Products = () => {
       description: "Timeless lemon, pure and simple. Our signature blend that started it all - perfectly balanced sweetness with that zesty lemon kick.",
       emoji: "🍋",
       color: "from-yellow-200 to-yellow-300",
-      textColor: "text-yellow-800"
+      textColor: "text-yellow-800",
+      image: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       name: "Crimson Zest",
       description: "A vibrant berry lemonade that combines the tartness of fresh lemons with the sweet, juicy burst of premium strawberries.",
       emoji: "🍓",
       color: "from-red-200 to-pink-300",
-      textColor: "text-red-800"
+      textColor: "text-red-800",
+      image: "https://images.unsplash.com/photo-1546173159-315724a31696?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     },
     {
       name: "Bush Mint Twist",
       description: "A unique Australian-inspired flavor featuring our classic lemon base with a refreshing hint of native mint leaves.",
       emoji: "🌿",
       color: "from-green-200 to-emerald-300",
-      textColor: "text-green-800"
+      textColor: "text-green-800",
+      image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
     }
   ];
 
@@ -48,12 +51,19 @@ const Products = () => {
               className="group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 border-0 shadow-lg overflow-hidden animate-fade-in-up"
               style={{ animationDelay: `${0.2 * index}s` }}
             >
-              <div className={`h-32 bg-gradient-to-br ${product.color} flex items-center justify-center relative overflow-hidden`}>
-                <div className="text-6xl animate-bounce-gentle group-hover:scale-110 transition-transform duration-300">
+              {/* Product Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div className="absolute top-4 right-4 text-4xl animate-bounce-gentle group-hover:scale-110 transition-transform duration-300">
                   {product.emoji}
                 </div>
-                <div className="absolute inset-0 bg-white/20 group-hover:bg-white/30 transition-colors duration-300"></div>
               </div>
+              
               <CardContent className="p-8">
                 <h3 className={`text-2xl font-bold mb-4 ${product.textColor} group-hover:scale-105 transition-transform duration-300`}>
                   {product.name}

@@ -12,12 +12,13 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto text-center relative z-10">
-        {/* Animated icon */}
+        {/* Logo */}
         <div className="mb-8 flex justify-center">
-          <div className="relative">
-            <Sun className="w-24 h-24 text-brand-yellow animate-wiggle" />
-            <Sparkles className="absolute -top-2 -right-2 w-8 h-8 text-brand-green animate-bounce-gentle" />
-          </div>
+          <img 
+            src="/lovable-uploads/c5f7d5db-75f8-40c3-a3b2-33e00398a97d.png" 
+            alt="Pops Lemonade AU Logo" 
+            className="w-48 h-auto md:w-64 animate-fade-in-up"
+          />
         </div>
 
         {/* Main headline */}
